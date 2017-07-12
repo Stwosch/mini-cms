@@ -1,0 +1,33 @@
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #E2E7EC;
+}
+
+.main-header {
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.btn-form-state {
+    margin: 20px 10px;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.statement {
+    display: inline-block;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.error {
+    color: #CC0000;
+}
+
+.success {
+    color: #4AA686;
+}

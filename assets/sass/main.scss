@@ -1,0 +1,180 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #E2E7EC; 
+} 
+
+.container {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	padding: 10rem;
+}
+
+.main-tile, .tile {
+	position: relative;
+	min-height: 50rem;
+	max-height: 60rem;
+	background-color: #FFF;
+	margin: 1rem;
+	letter-spacing: 0.1rem;
+
+	&__img {
+		display: block;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__heading {
+		text-transform: uppercase;
+		margin: 2.5rem;
+	}
+
+	&__date {
+		display: block;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		opacity: 0.5;
+		margin: 2.5rem;
+	}
+}
+
+.main-tile {
+	flex-basis: 90rem;
+
+	&__img {
+		height: 100%;
+	}
+
+	&__container {
+		position: absolute;
+		left: 1rem;
+		bottom: 2rem;
+	}
+
+	&__heading {
+		color: #FDFDFD;
+		font-size: 2.5rem;
+		width: 60%;
+	}
+
+	&__date {
+		color: #FFF;
+	}
+}
+
+.tile {
+	flex-basis: 44rem;
+
+	&__img {
+		height: 50%;
+	}
+
+	&__heading {
+		color: #373737;
+		font-size: 2rem;
+	}
+
+	&__author {
+		position: absolute;
+		display: block;
+		bottom: 2.5rem;
+		left: 2.5rem;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 100%;
+
+	}
+}
+
+.loader {
+	display: none;
+	text-align: center;
+
+	span {
+		display: inline-block;
+		background-color: #3498DB;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 100%;
+		margin: 0 0.5rem;
+
+		&:nth-child(1) {
+			animation: flashing 1s ease-in-out infinite;
+		}
+
+		&:nth-child(2) {
+			animation: flashing 1s ease-in-out 0.33s infinite;
+		}
+
+		&:nth-child(3){
+			animation: flashing 1s ease-in-out 0.66s infinite;
+		}
+	}
+}
+
+
+@keyframes flashing {
+
+  0%, 100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+
+
+
+@media (max-width: 1150px) {
+
+  html {
+	  font-size: 50%;
+  }
+}
+
+@media(max-width: 920px) {
+
+	.container {
+		padding: 1rem;
+	}
+}
+
+@media(max-width: 770px) {
+
+	html {
+		font-size: 62.5%;
+	}	
+
+	.container {
+		padding: 1rem;
+	}
+
+	.main-tile, .tile {
+		flex-basis: 100%;
+		min-height: 50rem;
+	}
+
+	.tile__img {
+		height: 50%;
+	}
+
+	.tile__author {
+		bottom: 1.5rem;
+	}
+}
+
+@media(max-width: 400px) {
+
+	.main-tile__heading {
+		width: 80%;
+	}
+}
